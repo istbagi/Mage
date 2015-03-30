@@ -12,7 +12,7 @@
 
 
 @implementation SWGSearchApi
-static NSString * basePath = @"https://api.gettyimages.com/";
+static NSString * basePath = @"https://api.gettyimages.com";
 
 +(SWGSearchApi*) apiWithHeader:(NSString*)headerValue key:(NSString*)key {
     static SWGSearchApi* singletonAPI = nil;
@@ -269,7 +269,7 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         queryParams[@"specific_people"] = specific_people;
     NSMutableDictionary* headerParams = [[NSMutableDictionary alloc] init];
     if(ApiKey != nil)
-        headerParams[@"ApiKey"] = ApiKey;if(AcceptLanguage  != nil)
+        headerParams[@"Api-Key"] = ApiKey;if(AcceptLanguage  != nil)
         headerParams[@"AcceptLanguage "] = AcceptLanguage ;if(Authorization != nil)
         headerParams[@"Authorization"] = Authorization;
 
@@ -339,7 +339,7 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         completionHandler: (void (^)(SWGCreative_image_search_results* output, NSError* error))completionBlock
          {
 
-    NSMutableString* requestUrl = [NSMutableString stringWithFormat:@"%@/v3/search/images/creative", basePath];
+    NSMutableString* requestUrl = [NSMutableString stringWithFormat:@"%@search/images/creative", basePath];
 
     // remove format in URL if needed
     if ([requestUrl rangeOfString:@".{format}"].location != NSNotFound)
@@ -375,11 +375,11 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         queryParams[@"sort_order"] = sort_order;if(specific_locations != nil)
         queryParams[@"specific_locations"] = specific_locations;if(specific_people != nil)
         queryParams[@"specific_people"] = specific_people;
+    
     NSMutableDictionary* headerParams = [[NSMutableDictionary alloc] init];
-    if(ApiKey != nil)
-        headerParams[@"ApiKey"] = ApiKey;if(AcceptLanguage  != nil)
-        headerParams[@"AcceptLanguage "] = AcceptLanguage ;if(Authorization != nil)
-        headerParams[@"Authorization"] = Authorization;
+      if(ApiKey != nil) headerParams[@"Api-Key"] = ApiKey;
+      if(AcceptLanguage  != nil) headerParams[@"AcceptLanguage "] = AcceptLanguage;
+      if(Authorization != nil) headerParams[@"Authorization"] = Authorization;
 
     id bodyDictionary = nil;
     

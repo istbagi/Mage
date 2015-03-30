@@ -75,6 +75,9 @@
 		741A2AA11ABE50D300671B85 /* SWGVideos_detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A2A651ABE50D300671B85 /* SWGVideos_detail.m */; };
 		741A2AA21ABE50D300671B85 /* SWGVideosApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A2A671ABE50D300671B85 /* SWGVideosApi.m */; };
 		741A2AA61ABE591300671B85 /* SWGEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 741A2AA51ABE591300671B85 /* SWGEnums.m */; };
+		882A69771AC9678800B9E423 /* MGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69761AC9678800B9E423 /* MGClient.m */; };
+		882A69811AC9955D00B9E423 /* MGImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69801AC9955D00B9E423 /* MGImageSource.m */; };
+		882A69851AC9A7A100B9E423 /* MGImageSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69841AC9A7A100B9E423 /* MGImageSearchResultCell.m */; };
 		D157F295E104F3A35CB54F37 /* libPods-MageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEAAE99FF0BEA8B9729847B8 /* libPods-MageTests.a */; };
 /* End PBXBuildFile section */
 
@@ -223,9 +226,16 @@
 		741A2A661ABE50D300671B85 /* SWGVideosApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWGVideosApi.h; sourceTree = "<group>"; };
 		741A2A671ABE50D300671B85 /* SWGVideosApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWGVideosApi.m; sourceTree = "<group>"; };
 		741A2AA31ABE513500671B85 /* Mage.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mage.pch; path = ../Mage.pch; sourceTree = "<group>"; };
-		741A2AA41ABE591300671B85 /* SWGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWGEnums.h; path = /Users/bagiistvan/dev/Mage/MageClient/SWGEnums.h; sourceTree = "<absolute>"; };
 		741A2AA51ABE591300671B85 /* SWGEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWGEnums.m; sourceTree = "<group>"; };
 		75F91DCC93B2B4003F3037AC /* Pods-Mage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mage/Pods-Mage.release.xcconfig"; sourceTree = "<group>"; };
+		8800F38C1AC9514700E0C392 /* SWGEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWGEnums.h; sourceTree = "<group>"; };
+		882A69751AC9678800B9E423 /* MGClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGClient.h; sourceTree = "<group>"; };
+		882A69761AC9678800B9E423 /* MGClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGClient.m; sourceTree = "<group>"; };
+		882A697F1AC9955D00B9E423 /* MGImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageSource.h; sourceTree = "<group>"; };
+		882A69801AC9955D00B9E423 /* MGImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImageSource.m; sourceTree = "<group>"; };
+		882A69821AC9965E00B9E423 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		882A69831AC9A7A100B9E423 /* MGImageSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageSearchResultCell.h; sourceTree = "<group>"; };
+		882A69841AC9A7A100B9E423 /* MGImageSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImageSearchResultCell.m; sourceTree = "<group>"; };
 		97B2A8C9FF2C2755DCA21965 /* Pods-MageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MageTests/Pods-MageTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4DF5EA90A40026542EF1BBD /* libPods-Mage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAAE99FF0BEA8B9729847B8 /* libPods-MageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,7 +273,8 @@
 		741A29BD1ABE4C3600671B85 = {
 			isa = PBXGroup;
 			children = (
-				741A29EF1ABE504D00671B85 /* Client */,
+				882A69821AC9965E00B9E423 /* SynthesizeSingleton.h */,
+				741A29EF1ABE504D00671B85 /* MageClient */,
 				741A29C81ABE4C3700671B85 /* Mage */,
 				741A29E21ABE4C3700671B85 /* MageTests */,
 				741A29C71ABE4C3700671B85 /* Products */,
@@ -284,6 +295,8 @@
 		741A29C81ABE4C3700671B85 /* Mage */ = {
 			isa = PBXGroup;
 			children = (
+				882A697F1AC9955D00B9E423 /* MGImageSource.h */,
+				882A69801AC9955D00B9E423 /* MGImageSource.m */,
 				741A29CD1ABE4C3700671B85 /* AppDelegate.h */,
 				741A29CE1ABE4C3700671B85 /* AppDelegate.m */,
 				741A29D01ABE4C3700671B85 /* ViewController.h */,
@@ -292,6 +305,8 @@
 				741A29D61ABE4C3700671B85 /* Images.xcassets */,
 				741A29D81ABE4C3700671B85 /* LaunchScreen.xib */,
 				741A29C91ABE4C3700671B85 /* Supporting Files */,
+				882A69831AC9A7A100B9E423 /* MGImageSearchResultCell.h */,
+				882A69841AC9A7A100B9E423 /* MGImageSearchResultCell.m */,
 			);
 			path = Mage;
 			sourceTree = "<group>";
@@ -323,14 +338,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		741A29EF1ABE504D00671B85 /* Client */ = {
+		741A29EF1ABE504D00671B85 /* MageClient */ = {
 			isa = PBXGroup;
 			children = (
-				741A29F11ABE50D300671B85 /* SWGClient */,
-				741A2AA41ABE591300671B85 /* SWGEnums.h */,
+				8800F38C1AC9514700E0C392 /* SWGEnums.h */,
 				741A2AA51ABE591300671B85 /* SWGEnums.m */,
+				741A29F11ABE50D300671B85 /* SWGClient */,
+				882A69751AC9678800B9E423 /* MGClient.h */,
+				882A69761AC9678800B9E423 /* MGClient.m */,
 			);
-			name = Client;
 			path = MageClient;
 			sourceTree = "<group>";
 		};
@@ -523,6 +539,7 @@
 				TargetAttributes = {
 					741A29C51ABE4C3700671B85 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7KBZCUGGTN;
 					};
 					741A29DE1ABE4C3700671B85 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -639,6 +656,7 @@
 			files = (
 				741A2A7E1ABE50D300671B85 /* SWGEditorial_image_search_results.m in Sources */,
 				741A2A681ABE50D300671B85 /* SWGAllowed_use.m in Sources */,
+				882A69851AC9A7A100B9E423 /* MGImageSearchResultCell.m in Sources */,
 				741A2A6F1ABE50D300671B85 /* SWGCollectionsApi.m in Sources */,
 				741A2A7C1ABE50D300671B85 /* SWGDownloadsApi.m in Sources */,
 				741A2A9E1ABE50D300671B85 /* SWGVideo_detail.m in Sources */,
@@ -657,10 +675,12 @@
 				741A29CC1ABE4C3700671B85 /* main.m in Sources */,
 				741A2A761ABE50D300671B85 /* SWGCustomer.m in Sources */,
 				741A2A6E1ABE50D300671B85 /* SWGCollections.m in Sources */,
+				882A69811AC9955D00B9E423 /* MGImageSource.m in Sources */,
 				741A2A821ABE50D300671B85 /* SWGEvents_result.m in Sources */,
 				741A2A7A1ABE50D300671B85 /* SWGDownload_size.m in Sources */,
 				741A2A951ABE50D300671B85 /* SWGProduct.m in Sources */,
 				741A2A731ABE50D300671B85 /* SWGCreative_image_search_item.m in Sources */,
+				882A69771AC9678800B9E423 /* MGClient.m in Sources */,
 				741A2A8E1ABE50D300671B85 /* SWGLink.m in Sources */,
 				741A2A9D1ABE50D300671B85 /* SWGUsageApi.m in Sources */,
 				741A2AA11ABE50D300671B85 /* SWGVideos_detail.m in Sources */,
@@ -824,10 +844,13 @@
 			baseConfigurationReference = 70D21EB79B725D375EDC7661 /* Pods-Mage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = Mage.pch;
 				INFOPLIST_FILE = Mage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -836,10 +859,13 @@
 			baseConfigurationReference = 75F91DCC93B2B4003F3037AC /* Pods-Mage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = Mage.pch;
 				INFOPLIST_FILE = Mage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
