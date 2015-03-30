@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "MGClient.h"
 
 @interface MageTests : XCTestCase
 
@@ -25,16 +26,41 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
+- (void)testGetImagesForWhale {
+  bool done = false;
+  static NSInteger foundImages = 0;
+  static NSError * gError = nil;
+  
+  [[MGClient sharedInstance] getImagesWithCompletitionBlockKeywords:@"white whale" conpletitionBlock:^(SWGImage_search_results *output, NSError *error) {
+    
+    if(error) {
+      
+      gError = error;
+    }
+    if(output == nil){
+      
+      NSLog(@"failed to fetch images");
+    }
+    else {
+      
+      foundImages = [output.result_count integerValue];
+    }
+  }];
+  
+  NSDate * loopUntil = [NSDate dateWithTimeIntervalSinceNow:10];
+  while(!done && [loopUntil timeIntervalSinceNow] > 0) {
+    
+    if(gError){
+    
+      XCTFail(@"got error %@", gError);
+      done = true;
+    }
+      
+    XCTAssertEqual(foundImages, 0, @"images not found");
+    done = true;
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+  }
+  
+  XCTAssertEqual(foundImages, 0, @"failed to fetch valid result in 10 seconds");
 }
-
 @end

@@ -78,6 +78,7 @@
 		882A69771AC9678800B9E423 /* MGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69761AC9678800B9E423 /* MGClient.m */; };
 		882A69811AC9955D00B9E423 /* MGImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69801AC9955D00B9E423 /* MGImageSource.m */; };
 		882A69851AC9A7A100B9E423 /* MGImageSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 882A69841AC9A7A100B9E423 /* MGImageSearchResultCell.m */; };
+		8852A6071ACA088300FF4260 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8852A6061ACA088300FF4260 /* SenTestingKit.framework */; };
 		D157F295E104F3A35CB54F37 /* libPods-MageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEAAE99FF0BEA8B9729847B8 /* libPods-MageTests.a */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +237,7 @@
 		882A69821AC9965E00B9E423 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		882A69831AC9A7A100B9E423 /* MGImageSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageSearchResultCell.h; sourceTree = "<group>"; };
 		882A69841AC9A7A100B9E423 /* MGImageSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImageSearchResultCell.m; sourceTree = "<group>"; };
+		8852A6061ACA088300FF4260 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		97B2A8C9FF2C2755DCA21965 /* Pods-MageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MageTests/Pods-MageTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4DF5EA90A40026542EF1BBD /* libPods-Mage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAAE99FF0BEA8B9729847B8 /* libPods-MageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8852A6071ACA088300FF4260 /* SenTestingKit.framework in Frameworks */,
 				D157F295E104F3A35CB54F37 /* libPods-MageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +267,7 @@
 		3574C100862556D3DD8F9D01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8852A6061ACA088300FF4260 /* SenTestingKit.framework */,
 				C4DF5EA90A40026542EF1BBD /* libPods-Mage.a */,
 				EEAAE99FF0BEA8B9729847B8 /* libPods-MageTests.a */,
 			);
@@ -877,6 +881,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -897,6 +902,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = MageTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
