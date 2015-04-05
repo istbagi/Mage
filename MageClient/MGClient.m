@@ -48,7 +48,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MGClient);
          
          NSString *token = resp[@"access_token"];
          NSString *type = resp[@"token_type"];
-         int expiresInSeconds = [resp[@"expires_in"] intValue];
+         NSTimeInterval expiresInSeconds = [resp[@"expires_in"] doubleValue];
          
          NSTimer *toketLifeTime = [NSTimer timerWithTimeInterval:expiresInSeconds
                                                           target:self
