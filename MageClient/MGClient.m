@@ -50,7 +50,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MGClient);
          NSString *type = resp[@"token_type"];
          int expiresInSeconds = [resp[@"expires_in"] intValue];
          
-         [NSTimer timerWithTimeInterval:expiresInSeconds target:self selector:@selector(clearAuthorization) userInfo:nil repeats:NO];
+         NSTimer *toketLifeTime = [NSTimer timerWithTimeInterval:expiresInSeconds
+                                                          target:self
+                                                        selector:@selector(clearAuthorization:)
+                                                        userInfo:nil
+                                                         repeats:NO];
+         [[NSRunLoop currentRunLoop] addTimer:toketLifeTime forMode:NSDefaultRunLoopMode];
          authorisation = [NSString stringWithFormat:@"%@ %@", type, token];
        }
        
@@ -59,7 +64,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MGClient);
    ];
 }
 
-- (void)clearAuthorization {
+- (void)clearAuthorization:(NSTimer *)timer {
   
   authorisation = nil;
 }
