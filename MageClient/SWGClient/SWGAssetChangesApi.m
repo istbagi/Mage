@@ -56,7 +56,6 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         completionHandler: (void (^)(NSString* output, NSError* error))completionBlock
          {
 
-    id m_body = nil;
     NSMutableString* requestUrl = [NSMutableString stringWithFormat:@"%@/v3/asset-changes/change-sets", basePath];
 
     // remove format in URL if needed
@@ -117,7 +116,6 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         completionHandler: (void (^)(NSString* output, NSError* error))completionBlock
          {
 
-    id m_body = nil;
     NSMutableString* requestUrl = [NSMutableString stringWithFormat:@"%@/v3/asset-changes/change-sets/{change_set_id }", basePath];
 
     // remove format in URL if needed
@@ -176,7 +174,6 @@ static NSString * basePath = @"https://api.gettyimages.com/";
         completionHandler: (void (^)(NSString* output, NSError* error))completionBlock
          {
 
-    id m_body = nil;
     NSMutableString* requestUrl = [NSMutableString stringWithFormat:@"%@/v3/asset-changes/channels", basePath];
 
     // remove format in URL if needed
